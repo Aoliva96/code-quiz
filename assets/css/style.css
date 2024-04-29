@@ -1,0 +1,172 @@
+/* Global */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Element hider */
+
+.hideElement {
+  display: none;
+}
+
+/* Header */
+
+header {
+  height: 3rem;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: #b54ae4;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #d87eff;
+  cursor: pointer;
+}
+
+#timer {
+  width: 6rem;
+  color: #000;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Main content */
+
+main {
+  margin-top: 6rem;
+}
+
+#quizWrapper {
+  width: 50%;
+  margin: 0 auto;
+  font-size: large;
+}
+
+#quizWrapper h1,
+h2 {
+  margin: 1rem 0;
+}
+
+/* Start Page */
+
+#startEl {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Questions */
+
+.codeBlock {
+  color: #fff;
+  background-color: #655393;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border: solid 3px #351c75;
+  border-radius: 0.5rem;
+  line-height: 1.5rem;
+}
+
+.codeChar {
+  color: gold;
+}
+
+.codeInt {
+  color: cyan;
+}
+
+.codeVar {
+  color: magenta;
+}
+
+.codeCom {
+  color: yellowgreen;
+}
+
+/* Answers */
+
+.answers {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.answers button {
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border: none;
+  height: 2.2rem;
+  font-size: medium;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  background-color: #351c75;
+  border-radius: 5px;
+  color: white;
+}
+
+button:hover {
+  background-color: #6243b0;
+  cursor: pointer;
+  border: none;
+}
+
+/* Results page */
+
+#resultBanner {
+  margin-top: 1rem;
+  font-size: larger;
+  font-style: italic;
+}
+
+#resultBanner p {
+  color: grey;
+  margin: 1rem;
+}
+
+#resultEl {
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 30%;
+  height: 2.2rem;
+  margin: 0 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* High Scores page */
+
+#highScoreEl button {
+  margin-right: 0.25rem;
+}
+
+ol {
+  list-style: inside;
+  list-style-type: decimal;
+}
+
+li {
+  background-color: #b4abcb;
+  padding: 0.5rem;
+}
+
+li:nth-child(odd) {
+  background-color: #d9d3e9;
+}

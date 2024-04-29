@@ -8,8 +8,297 @@
     <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-
   <body>
+    <header>
+      <a id="highScoreLink" class="">View high scores</a>
+      <p id="timer" class="">Time: <span id="timeLeft">0</span></p>
+    </header>
+    <main>
+      <div id="quizWrapper">
+        <!-- Recommend keeping question divs minimized in code editor for legibility -->
+        <div id="startEl" class="">
+          <h1>Coding Quiz Challenge</h1>
+          <p>
+            Try to answer the following code-related questions within the time
+            limit.
+          </p>
+          <p>
+            Keep in mind that incorrect answers will penalize your score/time
+          </p>
+          <p>by ten seconds!</p>
+          <button id="startBtn">Start Quiz</button>
+        </div>
+        <div id="q01" class="questions hideElement">
+          <h2>What is the expected output for the following code?</h2>
+          <div class="codeBlock">
+            <span class="codeChar">console.log</span>(
+            <span class="codeInt">1</span>
+            +
+            <span class="codeInt">2</span>
+            ===
+            <span class="codeInt">3</span>
+            );
+          </div>
+          <div class="answers">
+            <button>A. true</button>
+            <button>B. false</button>
+            <button>C. undefined</button>
+            <button>D. NaN</button>
+            <!-- Correct answer: A -->
+          </div>
+        </div>
+        <div id="q02" class="questions hideElement">
+          <h2>What is the expected output for the following code?</h2>
+          <div class="codeBlock">
+            <span class="codeChar">console.log</span>(
+            <span class="codeVar">typeof </span>
+            <span class="codeInt">NaN</span>
+            );
+          </div>
+          <div class="answers">
+            <button>A. number</button>
+            <button>B. NaN</button>
+            <button>C. undefined</button>
+            <button>D. object</button>
+            <!-- Correct answer: A -->
+          </div>
+        </div>
+        <div id="q03" class="questions hideElement">
+          <h2>What is the expected output for the following code?</h2>
+          <div class="codeBlock">
+            <span class="codeChar">console.log</span>(
+            <span class="codeVar">typeof </span>
+            { } );
+            <br />
+            <span class="codeCom"> // Or: </span>
+            <br />
+            <span class="codeChar">console.log</span>(
+            <span class="codeVar">typeof </span>
+            [ ] );
+          </div>
+          <div class="answers">
+            <button>A. string</button>
+            <button>B. object</button>
+            <button>C. undefined</button>
+            <button>D. number</button>
+            <!-- Correct answer: B -->
+          </div>
+        </div>
+        <div id="q04" class="questions hideElement">
+          <h2>
+            How would you declare a variable in JavaScript that cannot be
+            reassigned?
+          </h2>
+          <div class="answers">
+            <button>A. var x = 5;</button>
+            <button>B. let x = 5;</button>
+            <button>C. const x = 5;</button>
+            <button>D. all of the above</button>
+            <!-- Correct answer: C -->
+          </div>
+        </div>
+        <div id="q05" class="questions hideElement">
+          <h2>
+            What is the correct way to call a function named "myFunction"?
+          </h2>
+          <div class="answers">
+            <button>A. call function myFunction( )</button>
+            <button>B. myFunction( )</button>
+            <button>C. call myFunction( )</button>
+            <button>D. function myFunction( )</button>
+            <!-- Correct answer: B -->
+          </div>
+        </div>
+        <div id="q06" class="questions hideElement">
+          <h2>
+            What is the correct syntax for creating an IF statement in
+            JavaScript?
+          </h2>
+          <div class="answers">
+            <button>A. if var = 5</button>
+            <button>B. if var === 5 then</button>
+            <button>C. if ( var === 5 ) { . . . }</button>
+            <button>D. if var == 5 then { . . . }</button>
+            <!-- Correct answer: C -->
+          </div>
+        </div>
+        <div id="q07" class="questions hideElement">
+          <h2>
+            How would you round the number 7.25 to the nearest whole number in
+            JavaScript?
+          </h2>
+          <div class="answers">
+            <button>A. Math.round( 7.25 )</button>
+            <button>B. Math.rounding( 7.25 )</button>
+            <button>C. Math.rnd( 7.25 )</button>
+            <button>D. Math.roundInt( 7.25 )</button>
+            <!-- Correct answer: A -->
+          </div>
+        </div>
+        <div id="q08" class="questions hideElement">
+          <h2>
+            What is the correct syntax for creating an array in JavaScript?
+          </h2>
+          <div class="answers">
+            <button>A. const colors = "red", "green", "blue";</button>
+            <button>B. const colors = [ "red", "green", "blue" ];</button>
+            <button>C. const colors = { 1:"red", 2:"green", 3:"blue" };</button>
+            <button>
+              D. const colors = 1 = ( "red" ), 2 = ( "green" ), 3 = ( "blue" );
+            </button>
+            <!-- Correct answer: B -->
+          </div>
+        </div>
+        <div id="q09" class="questions hideElement">
+          <h2>What is the correct syntax for creating a JavaScript object?</h2>
+          <div class="answers">
+            <button>
+              A. const car = { type:"Fiat", model:"500", color:"white" };
+            </button>
+            <button>
+              B. const car = ( type:"Fiat", model:"500", color:"white" );
+            </button>
+            <button>
+              C. const car = [ "type":"Fiat", "model":"500", "color":"white" ];
+            </button>
+            <button>
+              D. const car = { "type: Fiat", "model: 500", "color: white" };
+            </button>
+            <!-- Correct answer: A -->
+          </div>
+        </div>
+        <div id="q10" class="questions hideElement">
+          <h2>
+            One common and useful tool used during development to print values
+            to the debugger is:
+          </h2>
+          <div class="answers">
+            <button>A. JavaScript</button>
+            <button>B. terminal/bash prompt</button>
+            <button>C. for loops</button>
+            <button>D. console.log()</button>
+            <!-- Correct answer: D -->
+          </div>
+        </div>
+        <div id="q11" class="questions hideElement">
+          <h2>What is the correct syntax for a JavaScript WHILE loop?</h2>
+          <div class="answers">
+            <button>A. while ( i <= 10; i++ )</button>
+            <button>B. while ( i <= 10 ) { . . . }</button>
+            <button>C. while i = 1 to 10 { . . . }</button>
+            <button>D. while [ i <= 10 ] { . . . }</button>
+            <!-- Correct answer: B -->
+          </div>
+        </div>
+        <div id="q12" class="questions hideElement">
+          <h2>
+            How would you create a JavaScript date object for the current date
+            and time?
+          </h2>
+          <div class="answers">
+            <button>A. const d = Date.now( );</button>
+            <button>B. const d = Date( );</button>
+            <button>C. const d = new Date( );</button>
+            <button>D. const d = date( );</button>
+            <!-- Correct answer: C -->
+          </div>
+        </div>
+        <div id="q13" class="questions hideElement">
+          <h2>
+            How would you assign a JavaScript function for a button click?
+          </h2>
+          <div class="answers">
+            <button>A. onclick="myFunction( )"</button>
+            <button>B. onclick= myFunction( )</button>
+            <button>C. onclick= myFunction</button>
+            <button>D. onclick= function "myFunction( )"</button>
+            <!-- Correct answer: A -->
+          </div>
+        </div>
+        <div id="q14" class="questions hideElement">
+          <h2>
+            How would you write a JavaScript selector function to change the
+            value of a text input field?
+          </h2>
+          <div class="answers">
+            <button>
+              A. document.getElementById( "myText" ).value = "Hello World!";
+            </button>
+            <button>
+              B. document.getElement( "myText" ).value = "Hello World!";
+            </button>
+            <button>
+              C. document.getElementById( myText.value ) = "Hello World!";
+            </button>
+            <button>
+              D. document.getElement( myText ).value = Hello World!;
+            </button>
+            <!-- Correct answer: A -->
+          </div>
+        </div>
+        <div id="q15" class="questions hideElement">
+          <h2>
+            What is the expected output for the following code, assuming the
+            HTML contains 5 "h2" tags?
+          </h2>
+          <div class="codeBlock">
+            <span class="codeChar">const</span>
+            <span class="codeVar">subTitles</span>
+            =
+            <span class="codeChar">document.querySelectorAll</span>( "<span
+              class="codeInt"
+              >h2</span
+            >" );
+            <br />
+            <span class="codeChar">console.log</span>(
+            <span class="codeVar">subTitles</span>
+            );
+          </div>
+          <div class="answers">
+            <button>A. List( 5 ) [ h2, h2, h2, h2, h2 ]</button>
+            <button>B. Array( 5 ) [ h2, h2, h2, h2, h2 ]</button>
+            <button>C. NodeList( 5 ) [ h2, h2, h2, h2, h2 ]</button>
+            <button>D. H2( 5 ) [ h2, h2, h2, h2, h2 ]</button>
+            <!-- Correct answer: C -->
+          </div>
+        </div>
+        <div id="resultEl" class="hideElement">
+          <h2>All done!</h2>
+          <p>
+            Your final score for this attempt was <span id="score">100</span>.
+            <span id="perfectScore" class="">Nice job!</span>
+          </p>
+          <form id="scoreForm">
+            <label for="scoreInput">Enter Initials to save your score:</label>
+            <input
+              type="text"
+              id="scoreInput"
+              name="scoreInput"
+              placeholder="Ex. AB or ABC..."
+            />
+            <button type="submit" id="scoreSubmit">Submit</button>
+          </form>
+        </div>
+        <div id="highScoreEl" class="hideElement">
+          <h2>High scores</h2>
+          <div id="scoreList">
+            <ol>
+              <li>AB - 100</li>
+              <li>ABC - 70</li>
+              <li>AB - 80</li>
+              <li>ABC - 50</li>
+            </ol>
+          </div>
+          <button type="button" id="backBtn">Go back</button>
+          <button type="button" id="clearBtn">Clear high scores</button>
+        </div>
+        <div id="resultBanner" class="hideElement">
+          <hr />
+          <p>Correct!</p>
+          <!-- Alternatively "Incorrect!" -->
+        </div>
+      </div>
+    </main>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
