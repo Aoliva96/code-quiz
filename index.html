@@ -16,7 +16,7 @@
     <main>
       <div id="quizWrapper">
         <!-- Recommend keeping question divs minimized in code editor for legibility -->
-        <div id="startEl">
+        <div id="start">
           <h1>Coding Quiz Challenge</h1>
           <p>
             Try to answer the following code-related questions within the time
@@ -254,8 +254,8 @@
         <div id="result" class="hide">
           <h2>All done!</h2>
           <p>
-            Your final score for this attempt was <span id="score">100</span>.
-            <span id="perfectScore" class="">Nice job!</span>
+            Your final score for this attempt was <span id="score"></span>.
+            <span id="perfectScore">Nice job!</span>
           </p>
           <form id="scoreForm">
             <label for="scoreInput">Enter Initials to save your score:</label>
@@ -265,7 +265,7 @@
               id="scoreInput"
               name="scoreInput"
               placeholder="Ex. AB or ABC..."
-              pattern="[A-Za-z]"
+              pattern="[ABC]"
             />
             <button type="submit" id="submit">Submit</button>
           </form>
