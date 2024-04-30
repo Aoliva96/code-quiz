@@ -125,18 +125,20 @@ button:hover {
   border: none;
 }
 
-/* Results page */
+/* Correct/Incorrect indicator */
 
-#resultBanner {
+#feedback {
   margin-top: 1rem;
   font-size: larger;
   font-style: italic;
 }
 
-#resultBanner p {
+#feedback p {
   color: grey;
   margin: 1rem;
 }
+
+/* Results page */
 
 #result {
   margin-bottom: 1.5rem;

@@ -1,36 +1,36 @@
 // KNOWN ISSUES:
 // - Questions advance to the next question when clicking anywhere on the question card, not just the answer buttons.
-// - The timer stops at 2 seconds left, but the score is still saved as 0.
-// - The high score list allows numbers and special characters to be entered as initials.
 // - All answers counting as incorrect regardless of the answer selected.
-// - The 'resultBanner' should unhide and display 'Correct!' or 'Incorrect!' based on the user's answer, then hide until the next question is answered.
-// - The 'perfectScore' message should be hidden unless user's score is 75.
+// - The high score list currently allows numbers and special characters to be entered as initials.
 // ============================================================================
 
 // DOM hooks
 const startEl = document.querySelector("#start");
 const timerEl = document.querySelector("#timer");
-const timeLeftEl = document.querySelector("#timeLeft");
 const resultEl = document.querySelector("#result");
+const feedbackEl = document.querySelector("#feedback");
 const highScoreEl = document.querySelector("#highScore");
 
 const backBtn = document.querySelector("#back");
 const clearBtn = document.querySelector("#clear");
 const submitBtn = document.querySelector("#submit");
 
+const timeLeft = document.querySelector("#timeLeft");
 const questions = document.querySelectorAll(".questions");
+const feedbackText = document.querySelector("#feedbackText");
+const perfectScore = document.querySelector("#perfectScore");
 const finalScore = document.querySelector("#score");
 const scoreList = document.querySelector("#scoreList");
 const scoreInput = document.querySelector("#scoreInput");
 
 // Countdown timer
-let time = 75;
+let time = 76;
 let timer;
 
 function countdown() {
   timer = setInterval(() => {
-    timeLeftEl.textContent = time;
     time--;
+    timeLeft.textContent = time;
     if (time <= 0) {
       clearInterval(timer);
       endQuiz();
@@ -55,6 +55,7 @@ shuffledQuestions.forEach((question, index) => {
 // Start quiz
 function startQuiz() {
   startEl.classList.add("hide");
+  perfectScore.classList.add("hide");
   questions[0].classList.remove("hide");
   countdown();
 }
@@ -65,7 +66,14 @@ function endQuiz() {
   questions.forEach((question) => {
     question.classList.add("hide");
   });
-  finalScore.textContent = time;
+  if (time >= 0) {
+    finalScore.textContent = time;
+  } else {
+    finalScore.textContent = 0;
+  }
+  if (time === 75) {
+    perfectScore.classList.remove("hide");
+  }
   resultEl.classList.remove("hide");
   timerEl.classList.add("hide");
 }
@@ -74,6 +82,9 @@ function endQuiz() {
 function nextQuestion(index) {
   questions[index].classList.add("hide");
   questions[index + 1].classList.remove("hide");
+  setTimeout(() => {
+    feedbackEl.classList.add("hide");
+  }, 1000);
 }
 
 // Check if answer is correct
@@ -84,15 +95,19 @@ function checkAnswer(index, answer) {
     } else {
       time = 75;
     }
+    feedbackText.textContent = "Correct!";
+    feedbackEl.classList.remove("hide");
   } else {
     if (time >= 10) {
       time -= 10;
     } else {
       time = 0;
     }
+    feedbackText.textContent = "Incorrect!";
+    feedbackEl.classList.remove("hide");
   }
 
-  timeLeftEl.textContent = time;
+  timeLeft.textContent = time;
   nextQuestion(index);
 }
 

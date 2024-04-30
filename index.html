@@ -255,7 +255,7 @@
           <h2>All done!</h2>
           <p>
             Your final score for this attempt was <span id="score"></span>.
-            <span id="perfectScore">Nice job!</span>
+            <span id="perfectScore" class="hide">A perfect score!</span>
           </p>
           <form id="scoreForm">
             <label for="scoreInput">Enter Initials to save your score:</label>
@@ -280,10 +280,9 @@
           <button type="button" id="back">Go back</button>
           <button type="button" id="clear">Clear high scores</button>
         </div>
-        <div id="resultBanner" class="hide">
+        <div id="feedback" class="hide">
           <hr />
-          <p>Correct!</p>
-          <!-- Alternatively "Incorrect!" -->
+          <p id="feedbackText"></p>
         </div>
       </div>
     </main>
