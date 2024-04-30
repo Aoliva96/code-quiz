@@ -9,7 +9,7 @@
 
 /* Element hider */
 
-.hideElement {
+.hide {
   display: none;
 }
 
@@ -60,7 +60,7 @@ h2 {
 
 /* Start Page */
 
-#startEl {
+#start {
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -138,7 +138,7 @@ button:hover {
   margin: 1rem;
 }
 
-#resultEl {
+#result {
   margin-bottom: 1.5rem;
 }
 
@@ -153,7 +153,7 @@ input {
 
 /* High Scores page */
 
-#highScoreEl button {
+#highScore button {
   margin-right: 0.25rem;
 }
 
