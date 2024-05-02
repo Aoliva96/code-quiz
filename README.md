@@ -14,7 +14,7 @@ A study in creating a timed quiz with JavaScript
 
 ## Introduction
 
-( intro text )
+For this project, I set out to create a timed multiple-choice quiz to test a user's knowledge of JavaScript fundamentals. The quiz involves answering a set of ten questions, randomly selected each time from a set of fifteen possible questions. The user will have time deducted from the clock for any wrong answers, and their final time at the end of the quiz can be saved along with their initials to a leaderboard that persists by utilizing localStorage.
 
 ## Problem
 
@@ -34,11 +34,11 @@ No starter code was provided for this project. The client desired the following 
 
 ## Solution
 
-I rectified the above problems in the following way:
+I addressed the above requirements in the following way:
 
-- ( list actions taken to solve above problem. )
--
--
+- Built custom HTML & CSS to match the client's mockup.
+- Developed JS functionality for the timer, DOM manipulation, and handling the user's final score.
+- Developed JS functionality for saving the user's initials and score to localStorage, and updating the persistent leaderboard.
 
 See below for a screenshot of the project.
 
@@ -52,20 +52,19 @@ See below for a screenshot of the project.
 
 ## Collaborators
 
-I collaborated with ( student / instructor names.)
-I made modifications to the following areas of my code while collaborating on this project with ( student / instructor names.).
-
--
--
--
+While I did not collaborate with anyone else on this project, I did utilize the EdX Xpert Learning Assistant and GitHub Copilot tools for debugging, JS structuring and illustrating code concepts.
 
 ## Resources
 
 See the links below to see some of the resources I used for this project:
 
-[link title placeholder](#)
+[MDN | JavaScript SetTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
 
-I also referenced ( in class activity names/numbers ).
+[MDN | JavaScript SetInterval()](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
+
+[MDN | JavaScript Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+
+I also referenced the week four class activities for handling JavaScript timers and DOM manipulation.
 
 ## License
 
