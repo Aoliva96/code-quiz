@@ -10,12 +10,11 @@
   </head>
   <body>
     <header>
-      <a id="highScoreLink">View high scores</a>
+      <a id="scoreLink">View high scores</a>
       <p id="timer">Time: <span id="timeLeft">0</span></p>
     </header>
     <main>
       <div id="quizWrapper">
-        <!-- Recommend keeping question divs minimized in code editor for legibility -->
         <div id="start">
           <h1>Coding Quiz Challenge</h1>
           <p>
@@ -40,10 +39,10 @@
             );
           </div>
           <div class="answers">
-            <button class="correct">A. true</button>
-            <button>B. false</button>
-            <button>C. undefined</button>
-            <button>D. NaN</button>
+            <button class="answer correct">A. true</button>
+            <button class="answer">B. false</button>
+            <button class="answer">C. undefined</button>
+            <button class="answer">D. NaN</button>
           </div>
         </div>
         <div id="q02" class="questions hide">
@@ -55,10 +54,10 @@
             );
           </div>
           <div class="answers">
-            <button class="correct">A. number</button>
-            <button>B. NaN</button>
-            <button>C. undefined</button>
-            <button>D. object</button>
+            <button class="answer correct">A. number</button>
+            <button class="answer">B. NaN</button>
+            <button class="answer">C. undefined</button>
+            <button class="answer">D. object</button>
           </div>
         </div>
         <div id="q03" class="questions hide">
@@ -75,10 +74,10 @@
             [ ] );
           </div>
           <div class="answers">
-            <button>A. string</button>
-            <button class="correct">B. object</button>
-            <button>C. undefined</button>
-            <button>D. number</button>
+            <button class="answer">A. string</button>
+            <button class="answer correct">B. object</button>
+            <button class="answer">C. undefined</button>
+            <button class="answer">D. number</button>
           </div>
         </div>
         <div id="q04" class="questions hide">
@@ -87,10 +86,10 @@
             reassigned?
           </h2>
           <div class="answers">
-            <button>A. var x = 5;</button>
-            <button>B. let x = 5;</button>
-            <button class="correct">C. const x = 5;</button>
-            <button>D. all of the above</button>
+            <button class="answer">A. var x = 5;</button>
+            <button class="answer">B. let x = 5;</button>
+            <button class="answer correct">C. const x = 5;</button>
+            <button class="answer">D. all of the above</button>
           </div>
         </div>
         <div id="q05" class="questions hide">
@@ -98,10 +97,10 @@
             What is the correct way to call a function named "myFunction"?
           </h2>
           <div class="answers">
-            <button>A. call function myFunction( )</button>
-            <button class="correct">B. myFunction( )</button>
-            <button>C. call myFunction( )</button>
-            <button>D. function myFunction( )</button>
+            <button class="answer">A. call function myFunction( )</button>
+            <button class="answer correct">B. myFunction( )</button>
+            <button class="answer">C. call myFunction( )</button>
+            <button class="answer">D. function myFunction( )</button>
           </div>
         </div>
         <div id="q06" class="questions hide">
@@ -110,10 +109,12 @@
             JavaScript?
           </h2>
           <div class="answers">
-            <button>A. if var = 5</button>
-            <button>B. if var === 5 then</button>
-            <button class="correct">C. if ( var === 5 ) { . . . }</button>
-            <button>D. if var == 5 then { . . . }</button>
+            <button class="answer">A. if var = 5</button>
+            <button class="answer">B. if var === 5 then</button>
+            <button class="answer correct">
+              C. if ( var === 5 ) { . . . }
+            </button>
+            <button class="answer">D. if var == 5 then { . . . }</button>
           </div>
         </div>
         <div id="q07" class="questions hide">
@@ -122,10 +123,10 @@
             JavaScript?
           </h2>
           <div class="answers">
-            <button class="correct">A. Math.round( 7.25 )</button>
-            <button>B. Math.rounding( 7.25 )</button>
-            <button>C. Math.rnd( 7.25 )</button>
-            <button>D. Math.roundInt( 7.25 )</button>
+            <button class="answer correct">A. Math.round( 7.25 )</button>
+            <button class="answer">B. Math.rounding( 7.25 )</button>
+            <button class="answer">C. Math.rnd( 7.25 )</button>
+            <button class="answer">D. Math.roundInt( 7.25 )</button>
           </div>
         </div>
         <div id="q08" class="questions hide">
@@ -133,12 +134,16 @@
             What is the correct syntax for creating an array in JavaScript?
           </h2>
           <div class="answers">
-            <button>A. const colors = "red", "green", "blue";</button>
-            <button class="correct">
+            <button class="answer">
+              A. const colors = "red", "green", "blue";
+            </button>
+            <button class="answer correct">
               B. const colors = [ "red", "green", "blue" ];
             </button>
-            <button>C. const colors = { 1:"red", 2:"green", 3:"blue" };</button>
-            <button>
+            <button class="answer">
+              C. const colors = { 1:"red", 2:"green", 3:"blue" };
+            </button>
+            <button class="answer">
               D. const colors = 1 = ( "red" ), 2 = ( "green" ), 3 = ( "blue" );
             </button>
           </div>
@@ -146,16 +151,16 @@
         <div id="q09" class="questions hide">
           <h2>What is the correct syntax for creating a JavaScript object?</h2>
           <div class="answers">
-            <button class="correct">
+            <button class="answer correct">
               A. const car = { type:"Fiat", model:"500", color:"white" };
             </button>
-            <button>
+            <button class="answer">
               B. const car = ( type:"Fiat", model:"500", color:"white" );
             </button>
-            <button>
+            <button class="answer">
               C. const car = [ "type":"Fiat", "model":"500", "color":"white" ];
             </button>
-            <button>
+            <button class="answer">
               D. const car = { "type: Fiat", "model: 500", "color: white" };
             </button>
           </div>
@@ -166,19 +171,21 @@
             to the debugger is:
           </h2>
           <div class="answers">
-            <button>A. JavaScript</button>
-            <button>B. terminal/bash prompt</button>
-            <button>C. for loops</button>
-            <button class="correct">D. console.log()</button>
+            <button class="answer">A. JavaScript</button>
+            <button class="answer">B. terminal/bash prompt</button>
+            <button class="answer">C. for loops</button>
+            <button class="answer correct">D. console.log()</button>
           </div>
         </div>
         <div id="q11" class="questions hide">
           <h2>What is the correct syntax for a JavaScript WHILE loop?</h2>
           <div class="answers">
-            <button>A. while ( i <= 10; i++ )</button>
-            <button class="correct">B. while ( i <= 10 ) { . . . }</button>
-            <button>C. while i = 1 to 10 { . . . }</button>
-            <button>D. while [ i <= 10 ] { . . . }</button>
+            <button class="answer">A. while ( i &#60;= 10; i++ )</button>
+            <button class="answer correct">
+              B. while ( i &#60;= 10 ) { . . . }
+            </button>
+            <button class="answer">C. while i = 1 to 10 { . . . }</button>
+            <button class="answer">D. while [ i &#60;= 10 ] { . . . }</button>
           </div>
         </div>
         <div id="q12" class="questions hide">
@@ -187,10 +194,10 @@
             and time?
           </h2>
           <div class="answers">
-            <button>A. const d = Date.now( );</button>
-            <button>B. const d = Date( );</button>
-            <button class="correct">C. const d = new Date( );</button>
-            <button>D. const d = date( );</button>
+            <button class="answer">A. const d = Date.now( );</button>
+            <button class="answer">B. const d = Date( );</button>
+            <button class="answer correct">C. const d = new Date( );</button>
+            <button class="answer">D. const d = date( );</button>
           </div>
         </div>
         <div id="q13" class="questions hide">
@@ -198,10 +205,10 @@
             How would you assign a JavaScript function for a button click?
           </h2>
           <div class="answers">
-            <button class="correct">A. onclick="myFunction( )"</button>
-            <button>B. onclick= myFunction( )</button>
-            <button>C. onclick= myFunction</button>
-            <button>D. onclick= function "myFunction( )"</button>
+            <button class="answer correct">A. onclick="myFunction( )"</button>
+            <button class="answer">B. onclick= myFunction( )</button>
+            <button class="answer">C. onclick= myFunction</button>
+            <button class="answer">D. onclick= function "myFunction( )"</button>
           </div>
         </div>
         <div id="q14" class="questions hide">
@@ -210,16 +217,16 @@
             value of a text input field?
           </h2>
           <div class="answers">
-            <button class="correct">
+            <button class="answer correct">
               A. document.getElementById( "myText" ).value = "Hello World!";
             </button>
-            <button>
+            <button class="answer">
               B. document.getElement( "myText" ).value = "Hello World!";
             </button>
-            <button>
+            <button class="answer">
               C. document.getElementById( myText.value ) = "Hello World!";
             </button>
-            <button>
+            <button class="answer">
               D. document.getElement( myText ).value = Hello World!;
             </button>
           </div>
@@ -243,12 +250,12 @@
             );
           </div>
           <div class="answers">
-            <button>A. List( 5 ) [ h2, h2, h2, h2, h2 ]</button>
-            <button>B. Array( 5 ) [ h2, h2, h2, h2, h2 ]</button>
-            <button class="correct">
+            <button class="answer">A. List( 5 ) [ h2, h2, h2, h2, h2 ]</button>
+            <button class="answer">B. Array( 5 ) [ h2, h2, h2, h2, h2 ]</button>
+            <button class="answer correct">
               C. NodeList( 5 ) [ h2, h2, h2, h2, h2 ]
             </button>
-            <button>D. H2( 5 ) [ h2, h2, h2, h2, h2 ]</button>
+            <button class="answer">D. H2( 5 ) [ h2, h2, h2, h2, h2 ]</button>
           </div>
         </div>
         <div id="result" class="hide">
